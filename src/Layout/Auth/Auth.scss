@@ -1,0 +1,172 @@
+$color_1: black;
+$color_2: #edf3f9;
+$color_3: rgb(20, 20, 20);
+$font-family_1: "Avenir Next";
+$background-color_1: #edf3f9;
+$background-color_2: transparent;
+$background-color_3: #d0deec;
+$background-color_4: rgba(0, 0, 0, 0.152);
+
+@keyframes animateInputBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.yudiz.com/codepen/animation-form/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 700px;
+  font-family: "Montserrat", sans-serif;
+  background-repeat: no-repeat;
+  height: 100vh;
+  section {
+    height: 100%;
+  }
+  .box {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+    background-color: $background-color_1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      transition: all 0.3s ease;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      transition: all 0.3s ease;
+    }
+    span {
+      position: absolute;
+      inset: 3px;
+      background-color: $background-color_1;
+      border-radius: 10px;
+      z-index: 2;
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: $background-color_2;
+        color: $color_1;
+        font-size: 20px;
+        padding: 16px;
+        position: relative;
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .form-container {
+    padding: 70px 0px;
+    background-color: $background-color_3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+    transition: 0.3s;
+    min-height: 540px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+  }
+  .left-right {
+    .login-form {
+      transform: translateX(-100%);
+    }
+    .signUp-form {
+      transform: translateX(0%);
+    }
+    transform: translateX(100%);
+  }
+  .form-wraper {
+    .input-group {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    padding: 0px 40px;
+    position: absolute;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .signUp-form {
+    transform: translateX(100%);
+  }
+  .action-button {
+    button {
+      border-radius: 10px;
+      font-family: $font-family_1;
+      font-size: 20px;
+      padding: 0.5rem 3rem;
+      color: $color_1;
+      box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+      border: solid 3px transparent;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0),
+          rgba(255, 255, 255, 0)
+        ),
+        linear-gradient(101deg, #00ccff, #d400d4);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: none;
+      color: $color_2;
+      width: 100%;
+      padding: 10px;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      &:hover {
+        color: $color_3;
+        box-shadow: 2px 1000px 1px #edf3f9 inset;
+      }
+    }
+  }
+  .form-title {
+    margin-bottom: 30px;
+  }
+  .main-form-container {
+    min-width: 800px;
+    background-color: $background-color_4;
+    border-radius: 10px;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+  }
+  .bg-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .section {
+    min-height: 100vh;
+  }
+}

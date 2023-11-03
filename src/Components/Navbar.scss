@@ -1,0 +1,61 @@
+.navbar {
+  background-color: rgb(66, 66, 66);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px 15px;
+  ul {
+    display: flex;
+    align-items: center;
+    position: relative;
+    list-style-type: none;
+    gap: 20px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  .user {
+    margin-left: 20px;
+    .avatar {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 5px;
+      img {
+        width: 40px;
+      }
+    }
+
+    .info {
+      position: absolute;
+      color: black;
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      right: 5px;
+      top: 65px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      padding: 10px;
+      z-index: 99;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s ease;
+      a {
+        color: black;
+      }
+      &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+      p {
+        cursor: pointer;
+        &::selection {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

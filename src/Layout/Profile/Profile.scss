@@ -1,0 +1,56 @@
+.profile {
+  width: 70%;
+  max-width: 1200px;
+  margin: auto;
+  h2 {
+    margin: 20px 0;
+  }
+  .inputs {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .input-box {
+    display: block;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    input {
+      padding: 10px;
+      width: 300px;
+      display: block;
+      outline: none;
+    }
+    label {
+      margin: 20px 0;
+      display: block;
+    }
+    .pass {
+      display: flex;
+      align-items: center;
+      border: 1px solid black;
+      justify-content: start;
+      width: 300px;
+      input {
+        padding: 5px 10px;
+        border: none;
+      }
+      svg {
+        font-size: 0.7rem;
+        cursor: pointer;
+      }
+    }
+  }
+  button {
+    padding: 7px 35px;
+    background-color: transparent;
+    border: 1px solid gray;
+    cursor: pointer;
+    transition: 0.4s ease;
+    &:hover {
+      background-color: gray;
+      color: white;
+    }
+  }
+}
