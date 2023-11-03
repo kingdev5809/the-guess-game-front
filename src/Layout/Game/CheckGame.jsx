@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { toast } from "react-toastify";
 import { toastOptions } from "../../App";
 import "./Game.scss";
@@ -11,7 +11,6 @@ function CheckGame() {
   let data = JSON.parse(localStorage.getItem("game"));
   const [message, setMessage] = useState([]);
   const [histories, sethistories] = useState([]);
-  const [values, setValues] = useState(Array(4).fill(""));
   let initialState = {
     input1: {
       value: "",

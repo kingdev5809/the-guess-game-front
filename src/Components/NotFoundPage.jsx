@@ -7,6 +7,7 @@ function NotFoundPage() {
 
   useEffect(() => {
     navigate("/");
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (pathname === "*") {

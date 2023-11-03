@@ -64,6 +64,7 @@ function Auth() {
 
   const handleValidation = (type) => {
     const emailRegex =
+      // eslint-disable-next-line no-useless-escape
       /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
     if (type === "register" && !name) {
       toast.error("Name field is required!", toastOptions);
